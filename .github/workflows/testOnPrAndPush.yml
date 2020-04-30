@@ -29,6 +29,9 @@ jobs:
     - name: linting
       run: npm run lint
       
+  test:
+    runs-on: ubuntu-latest
+    steps:
     - name: Cypress.io
       uses: cypress-io/github-action@v1.16.1
       with: 
