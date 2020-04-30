@@ -98,8 +98,8 @@ const Item: React.FC<Props> = ({ todo }) => {
   }, [editInput, state.onEdit])
 
   return (
-    <Container data-cy="todo-item1">
-      <li className={SwitchStyle(todo, state.onEdit)} data-testid="todo-item1">
+    <Container data-cy="todo-item">
+      <li className={SwitchStyle(todo, state.onEdit)} data-testid="todo-item">
         <div className="view" data-testid="view">
           <input
             className="toggle"
