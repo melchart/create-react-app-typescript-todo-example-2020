@@ -37,7 +37,8 @@ jobs:
     # Run cypress
     - name: lint
       run: npm run typecheck
-        
+      
+      
   test:
     needs: setup
     # The type of runner that the job will run on
@@ -45,10 +46,18 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - name: Cypress.io
+      uses: cypress-io/github-action@v1.16.1
+      with: 
+        start: npm run start
+        record: true
+      env:
+        CYPRESS_RECORD_KEY: ${{ secret.CYPRESS_RECORD_KEY }}
+        GITHUB_TOKEN: ${{ secret.GITHUB_TOKEN }}
     
     # Run cypress
-    - name: test & record
-      run: npm run cypress:run:record
+    #- name: test & record
+    #  run: npm run cypress:run:record
         
   lint:
     needs: setup
