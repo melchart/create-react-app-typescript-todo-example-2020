@@ -34,4 +34,6 @@ jobs:
     
     # Run cypress
     - name: test & record
-      run: npm run cypress:run:record
+      run: |
+        npm install
+        npm run cypress:run:record
