@@ -22,9 +22,7 @@ jobs:
     
     # Run cypress
     - name: install
-      run: |
-        npm install
-        npm run start
+      run: npm install
      
   typecheck:
     needs: setup
