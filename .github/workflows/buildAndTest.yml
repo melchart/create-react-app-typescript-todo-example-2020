@@ -29,15 +29,24 @@ jobs:
     - name: linting
       run: npm run lint
       
-  integration-test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Cypress.io
-      uses: cypress-io/github-action@v1.16.1
-      with: 
+    - name: Percy Test
+      uses: percy/exec-action@v0.1.1
+      with:
         start: npm run start
-        record: true
+        command: "cypress run --record"
       env:
+        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}        
         CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #integration-test:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #  - uses: actions/checkout@v2
+  #  - name: Cypress.io
+  #    uses: cypress-io/github-action@v1.16.1
+  #    with: 
+  #      start: npm run start
+  #      record: true
+  #    env:
+  #      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+  #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
