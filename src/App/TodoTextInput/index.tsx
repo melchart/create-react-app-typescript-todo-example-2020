@@ -30,7 +30,6 @@ const TodoTextInput: React.FC = () => {
     <Container>
       <header className="header">
         <h1>todos</h1>
-        <h1>super guti+1</h1>
         <input
           type="text"
           className="new-todo"
