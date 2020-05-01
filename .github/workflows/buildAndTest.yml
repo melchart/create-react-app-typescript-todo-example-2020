@@ -34,7 +34,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Cypress.io
-      uses: cypress-io/github-action@v1.16.1
+      uses: cypress-io/github-action@v1.24.0
       with: 
         start: npm run start
         command-prefix: 'percy exec -- npx'
