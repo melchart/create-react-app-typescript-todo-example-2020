@@ -66,14 +66,26 @@ test('should be work correctly all completed:true|false checkbox toggle button',
   // toggle on
   fireEvent.click(getByTestId('toggle-all-btn'))
   // should be completed all todo items
-  expect((getAllByTestId('todo-item-complete-check')[0] as HTMLInputElement).checked).toBe(true) /* eslint-disable-line prettier/prettier */
-  expect((getAllByTestId('todo-item-complete-check')[1] as HTMLInputElement).checked).toBe(true) /* eslint-disable-line prettier/prettier */
-  expect((getAllByTestId('todo-item-complete-check')[2] as HTMLInputElement).checked).toBe(true) /* eslint-disable-line prettier/prettier */
+  expect(
+    (getAllByTestId('todo-item-complete-check')[0] as HTMLInputElement).checked
+  ).toBe(true)
+  expect(
+    (getAllByTestId('todo-item-complete-check')[1] as HTMLInputElement).checked
+  ).toBe(true)
+  expect(
+    (getAllByTestId('todo-item-complete-check')[2] as HTMLInputElement).checked
+  ).toBe(true)
 
   // toggle off
   fireEvent.click(getByTestId('toggle-all-btn'))
   // should be not comleted all todo items
-  expect((getAllByTestId('todo-item-complete-check')[0] as HTMLInputElement).checked).toBe(false) /* eslint-disable-line prettier/prettier */
-  expect((getAllByTestId('todo-item-complete-check')[1] as HTMLInputElement).checked).toBe(false) /* eslint-disable-line prettier/prettier */
-  expect((getAllByTestId('todo-item-complete-check')[2] as HTMLInputElement).checked).toBe(false) /* eslint-disable-line prettier/prettier */
+  expect(
+    (getAllByTestId('todo-item-complete-check')[0] as HTMLInputElement).checked
+  ).toBe(false)
+  expect(
+    (getAllByTestId('todo-item-complete-check')[1] as HTMLInputElement).checked
+  ).toBe(false)
+  expect(
+    (getAllByTestId('todo-item-complete-check')[2] as HTMLInputElement).checked
+  ).toBe(false)
 })

@@ -11,9 +11,13 @@ interface Props {
 const TodoList: React.FC<Props> = ({ path }) => {
   const [appState, setAppState] = useAppState<AppState>()
 
-  function toggleAllCheckbox(e: React.ChangeEvent<HTMLInputElement>): void { /* eslint-disable-line prettier/prettier */
+  function toggleAllCheckbox(e: React.ChangeEvent<HTMLInputElement>): void {
     // reverse all todo.completed: boolean flag
-    setAppState({ todoList: appState.todoList.map((t: Todo): Todo => ({ ...t, completed: e.target.checked })) }) /* eslint-disable-line prettier/prettier */
+    setAppState({
+      todoList: appState.todoList.map(
+        (t: Todo): Todo => ({ ...t, completed: e.target.checked })
+      ),
+    })
   }
 
   return (
