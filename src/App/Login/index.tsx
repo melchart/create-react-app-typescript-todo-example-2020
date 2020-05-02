@@ -11,18 +11,21 @@ const Login: React.FC<{ path: string }> = () => {
           placeholder="Name"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          data-cy="name-input"
         />
         <input
           placeholder="Password"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          data-cy="password-input"
         />
         <button
           onClick={(e) => {
             e.preventDefault()
             console.log(`username: ${username}; password: ${password}`)
           }}
+          data-cy="login-submit"
         >
           Login
         </button>
