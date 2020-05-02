@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker'
 import App, { LocalStorageKey } from './App'
 import ErrorBoundary from './ErrorBoundary'
 import { NotFound } from './NotFound'
+import Login from './App/Login'
 
 export type Routes = '/' | '/active' | '/completed'
 
@@ -52,6 +53,7 @@ ReactDOM.render(
         <Controller path="/" />
         <Controller path="/active" />
         <Controller path="/completed" />
+        <Login path="/login" />
         <NotFound default />
       </Router>
     </Provider>

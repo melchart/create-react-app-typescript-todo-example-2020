@@ -7,6 +7,7 @@ import Copyright from './Copyright'
 import { Routes, AppState } from '../index'
 import { RouteComponentProps } from '@reach/router'
 import { Container } from './style'
+import Header from './Header'
 
 export enum LocalStorageKey {
   APP_STATE = 'APP_STATE',
@@ -29,6 +30,7 @@ const App: React.FC<Props & RouteComponentProps> = ({ path }) => {
 
   return (
     <Container>
+      <Header />
       <section className="todoapp">
         <TodoTextInput />
         {appState.todoList.length ? (
