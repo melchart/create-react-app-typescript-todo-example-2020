@@ -28,7 +28,7 @@ const TodoTextInput: React.FC = () => {
 
   return (
     <Container>
-      <header className="header">
+      <section className="input-area">
         <h1>todos</h1>
         <input
           type="text"
@@ -39,7 +39,7 @@ const TodoTextInput: React.FC = () => {
           autoFocus
           data-cy="new-todo-input-text"
         />
-      </header>
+      </section>
     </Container>
   )
 }
